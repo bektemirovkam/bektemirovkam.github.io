@@ -124,3 +124,41 @@ header{
 	}
 }
 
+
+@media (max-width: 576px){
+	header .search{
+		margin-right: 2rem;
+	}
+	.discr{
+	position: relative;
+	margin-top: 1rem;
+	.title{
+	position: absolute;
+	top:5%;
+	left:5%;
+	&_first{
+		font-size:0.5rem;
+		text-transform: uppercase;
+		.bold()
+	}
+	&_main{
+		font-size: 1.5rem;
+	}
+	&_third{
+		font-size: 0.7rem;
+	}
+}
+	.next{
+		position: absolute;
+		bottom:0;
+		right:5%;
+		color:@font_color;
+		font-size: 2rem;
+		transition: 0.3s;
+		&:hover{
+			color:#777;
+			font-size: 2.5rem;
+		}
+	}
+}
+}

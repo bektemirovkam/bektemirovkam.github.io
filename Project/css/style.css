@@ -110,3 +110,41 @@ header .search:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
+@media (max-width: 576px) {
+  header .search {
+    margin-right: 2rem;
+  }
+  .discr {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .discr .title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+  .discr .title_first {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .discr .title_main {
+    font-size: 1.5rem;
+  }
+  .discr .title_third {
+    font-size: 0.7rem;
+  }
+  .discr .next {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    color: #ffffff;
+    font-size: 2rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .discr .next:hover {
+    color: #777;
+    font-size: 2.5rem;
+  }
+}
