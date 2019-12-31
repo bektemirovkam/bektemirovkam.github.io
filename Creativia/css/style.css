@@ -49,7 +49,7 @@ p {
   position: fixed;
   width: 100%;
   opacity: 0.9;
-  z-index: 999;
+  z-index: 999999;
 }
 .navigator {
   font-size: 1.8rem;
@@ -305,21 +305,26 @@ p {
   align-items: center;
 }
 .feature {
-  padding: 10rem 0;
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 40rem;
+}
+.feature_input {
+  margin-top: 17rem;
 }
 .feature_input_element {
+  position: relative;
   display: block;
   border: 1px solid #e7e7e7;
   margin-bottom: 2.5rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  z-index: 9999;
+  background-color: #f5f5f5;
 }
 .feature_input_element:hover {
   background-color: #ff0036;
   color: #f5f5f5;
-}
-.feature_input_check {
-  width: 2rem;
-  height: 2rem;
+  cursor: pointer;
 }
 .feature_input_check_right {
   margin-right: 1.8rem;
@@ -332,6 +337,24 @@ p {
   font-family: Raleway, sans-serif;
   font-weight: 600;
   font-size: 2rem;
+}
+.feature_input_label:hover {
+  cursor: pointer;
+}
+.feature_box {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+.feature_box_btn {
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -17%;
 }
 @media (max-width: 992px) {
   .logo {
@@ -349,6 +372,15 @@ p {
   .about_slider_title {
     margin-left: 2rem;
   }
+  .feature_input {
+    margin-top: 15rem;
+  }
+  .feature_input_label {
+    font-size: 1rem;
+  }
+  .feature_input_element {
+    padding: 0.5rem 1rem;
+  }
 }
 @media (max-width: 768px) {
   .accordion {
@@ -356,6 +388,12 @@ p {
   }
   .swiper-container {
     padding-bottom: 5rem;
+  }
+  .feature_box {
+    top: 25%;
+  }
+  .feature_input {
+    margin-top: 20rem;
   }
 }
 @media (max-width: 1200px) {
@@ -368,6 +406,9 @@ p {
     padding: 1rem;
     margin-left: 1.2rem;
   }
+  .feature_input_label {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 576px) {
   .about {
@@ -378,5 +419,15 @@ p {
   }
   .thumbs_title {
     font-size: 1rem;
+  }
+  .feature_box {
+    bottom: 25%;
+    left: 20%;
+  }
+  .feature_input {
+    margin-top: 2rem;
+  }
+  .feature_box_img {
+    display: none;
   }
 }
