@@ -50,6 +50,7 @@ p{
 		background-color: @red_color;
 	}
 }
+
 .header{
 	background-color: @nav_bg_color;
 	position: fixed;
@@ -151,6 +152,25 @@ p{
 		cursor: pointer;
 	}
 }
+.swiper-scrollbar{
+	width: 38%!important;
+	height: 0.2rem!important;
+	background-color: @black_color;
+	left: 50%!important;
+    transform: translateX(-50%)!important;
+}
+
+.swiper-scrollbar-portfolio{
+	background-color: @red_color!important;
+}
+.about_scroll_drag{
+	height: 1rem!important;
+	background-color: @black_color;
+}
+.portfolio_scroll_drag{
+	height: 1rem !important;
+	background-color: @red_color;
+}
 .collapsed{
 	color:@black_color;
 	&:before{
@@ -176,13 +196,14 @@ p{
 	font-size: 1.6rem;
 }
 
-
 // Swipper_about_us
-.swiper-container {
+
+.about-swiper-container {
   width: 100%;
   height: 300px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom:5rem;
 }
 .swiper-slide {
   background-size: cover;
@@ -208,25 +229,11 @@ p{
   opacity: 1;
 }
 
-.swiper{
-	&_next{
-		color:@red_color;
-   	    top: 70%;
-   	    right: 15%;
-	}
-	&_prev{
-		color:@red_color;
-		top: 70%;
-    	left: 68%;
-	}
-}
-
 // Portfolio
 
 .portfolio{
 	background-color: @nav_bg_color;
 	padding-top:10rem;
-	padding-bottom: 10rem;
 	&_title{
 		color:@light_color;
 		margin-bottom: 3.5rem;
@@ -248,7 +255,6 @@ p{
 	}
 	&_galery_link{
 		width: 100%;
-
 	}
 }
 .img_mask{
@@ -286,15 +292,12 @@ p{
 
 .portfolio_swiper {
   width: 100%;
-  height: 100%;
+  height: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
 .portfolio_swiper_slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  height: calc((100% - 30px) / 2);
+  height: calc((100%-22px) / 2);
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,9 +312,38 @@ p{
   -webkit-align-items: center;
   align-items: center;
 }
-
-
-
+// Feature
+.feature{
+	padding: 10rem 0;
+	&_input{
+		&_element{
+			display: block;
+			border:1px solid #e7e7e7;
+			margin-bottom: 2.5rem;
+			padding: 2rem;
+			&:hover{
+				background-color: @red_color;
+				color:@light_color;
+			}
+		}
+		&_check{
+			width: 2rem;
+			height: 2rem;
+			&_right{
+				margin-right: 1.8rem;
+			}
+			&_left{
+				margin-left: 1.8rem;
+			}	
+		}
+		&_label{
+			text-transform: uppercase;
+			font-family: Raleway, sans-serif;
+			font-weight: 600;
+			font-size: 2rem;
+		}
+	}
+}
 
 // Media
 @media (max-width: 992px){
@@ -330,32 +362,14 @@ p{
 	.about_slider_title{
 		margin-left: 2rem;
 	}
-	.swiper{
-	&_next{
-		color:@red_color;
-   	    top: 35%;
-   	    right: 15%;
-	}
-	&_prev{
-		color:@red_color;
-		top: 35%;
-    	left: 68%;
-		}
-	}
 }
 
 @media(max-width: 768px){
-	.swiper{
-	&_next{
-		color:@red_color;
-   	    top: 92%;
-   	    right: 15%;
+	.accordion{
+		margin-bottom: 4rem;
 	}
-	&_prev{
-		color:@red_color;
-		top: 92%;
-    	left: 15%;
-		}
+	.swiper-container{
+		padding-bottom: 5rem;
 	}	
 }
 
@@ -370,23 +384,14 @@ p{
 		}
 	}
 }
-@media (max-width: 540px){
+@media (max-width: 576px){
+	.about {
+		margin-bottom: 0;
+	}
 	.thumbs_discr{
 		display: none;
 	}
 	.thumbs_title{
-		font-size: 1.5rem;
-	}
-	.swiper{
-		&_next{
-			color:@red_color;
-   	    	top: 92%;
-   	    	right: 0;
-			}
-		&_prev{
-			color:@red_color;
-			top: 92%;
-    		left: 0%;
-		}
+		font-size: 1rem;
 	}
 }
