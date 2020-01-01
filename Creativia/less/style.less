@@ -78,7 +78,7 @@ p{
 	position: absolute;
 	top:0;
 	left:7%;
-	z-index: 999;
+	z-index: 99999999;
 }
 .slider{
 	background: url(../img/slider_bg.jpg) no-repeat;
@@ -162,14 +162,38 @@ p{
 
 .swiper-scrollbar-portfolio{
 	background-color: @red_color!important;
+	bottom: 0 !important;
 }
 .about_scroll_drag{
-	height: 1rem!important;
+	position: absolute;
+	height: 2rem!important;
 	background-color: @black_color;
+	bottom: 2px;
 }
 .portfolio_scroll_drag{
-	height: 1rem !important;
+	position: absolute;
+	bottom: 2px;
+	height: 2rem !important;
 	background-color: @red_color;
+}
+.clients-swiper-scrollbar{
+	background-color: @red_color!important;
+	bottom: 0 !important;
+}
+.clients_scroll_drag{
+	position: absolute;
+	height: 2rem!important;
+	background-color: @red_color;
+	bottom: 2px;
+}
+.team-swiper-container{
+	padding-bottom: 10rem;
+}
+.team_scroll_drag{
+	position: absolute;
+	height: 2rem!important;
+	background-color: @black_color;
+	bottom: 2px;
 }
 .collapsed{
 	color:@black_color;
@@ -370,6 +394,138 @@ p{
 	}
 }
 
+// Clients
+.clients{
+	background-image: url(../img/clients_bg.jpg);
+	background-size: cover;
+	background-position: 20% 30%;
+	&_main{
+		height: 100%;
+		background-color: rgba(6, 6, 11, 0.8);
+		padding: 8rem 0;
+	}
+	&_discr{
+		color:@light_color;
+	}
+	&_title{
+		text-transform: uppercase;
+		color:@light_color;
+		margin-top: 4rem;
+	}
+	&_say{
+		color:@light_color;
+		margin: 5rem 0;
+	}
+	&_name{
+		color:@red_color;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		font-weight: bold;
+		margin-top: 1rem;
+		margin-bottom: 5rem;
+	}
+	&_box{
+			margin-top: 4rem;
+			background-color: @light_color;
+			box-shadow: inset 0px 0px 30px rgba(0,0,0,0.8);
+			padding: 4rem 5rem;
+		&_name{
+			color:@black_color;
+			font-size: 2.3rem;
+			&:before{
+			  position: absolute;
+			  top: 50%;
+			  left:20%;
+			  transform: translate(-50%, 0);
+				content:'';
+				display: inline-block;
+				height: 4.5rem;
+				width: 4.5rem;
+			}
+		}
+		&_icon1{
+			&:before{
+				background: url(../img/clients_icon1.png);
+				background-size: cover;
+			}
+		}
+		&_icon2{
+			&:before{
+				background: url(../img/clients_icon2.png);
+				background-size: cover;
+			}
+		}
+		&_icon3{
+			&:before{
+				background: url(../img/clients_icon4.png);
+				background-size: cover;
+			}
+		}
+		&_icon4{
+			&:before{
+				background: url(../img/clients_icon3.png);
+				background-size: cover;}
+		}
+	}
+	&_indicator{
+		width: 1rem !important;
+		height: 1rem !important;
+	}
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: red;
+}
+
+.team{
+	padding: 10rem 0;
+	&_working{
+		border:1px solid @black_color;
+	}
+	&_card{
+		display: block;
+		position: relative;
+	}
+	&_img{		
+		&_mask{
+			position: absolute;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right:0;
+			background-color: @black_color;
+			opacity: 0;
+			&:hover{
+				opacity: 1;
+			}
+			&_icons{
+				position: absolute;
+				top:50%;
+				left:50%;
+				transform: translateY(-50%);
+				transform: translateX(-50%);
+				&_link{
+					display: inline-block;
+					width: 25%;
+				}
+			}	
+		}
+	}
+	&_name{
+		display: block;
+		text-transform: uppercase;
+		color:@red_color;
+		font-size: 2rem;
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+		text-decoration: none;
+	}
+	&_profession{
+		font-size: 1.6rem;
+		margin-bottom: 4rem;
+	}
+}
+
 // Media
 @media (max-width: 992px){
 	.logo{
@@ -396,14 +552,22 @@ p{
 		padding: 0.5rem 1rem;
 		}
 	}
+	.clients_box_name{
+		font-size: 1.5rem;
+		&:before{
+		  position: absolute;
+		  top: 50%;
+		  left:20%;
+		  transform: translate(-50%, 0);
+			height: 3.5rem;
+			width: 3.5rem;
+		}
+	}
 }
 
 @media(max-width: 768px){
 	.accordion{
 		margin-bottom: 4rem;
-	}
-	.swiper-container{
-		padding-bottom: 5rem;
 	}
 	.feature_box{
 		top:25%;
@@ -439,8 +603,11 @@ p{
 	.thumbs_title{
 		font-size: 1rem;
 	}
+	.feature{
+		padding-bottom: 10rem;
+	}
 	.feature_box{
-		bottom: 25%;
+		bottom: 0;
 		left:20%;
 	}
 	.feature_input{
