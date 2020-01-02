@@ -197,6 +197,9 @@ p{
 	background-image: url(../img/romb_scroll_red.png);
 	bottom: -8px;
 }
+.clients-swiper-container{
+	padding: 8rem 0;
+}
 .team-swiper-container{
 	padding-bottom: 10rem;
 }
@@ -417,7 +420,6 @@ p{
 	&_main{
 		height: 100%;
 		background-color: rgba(6, 6, 11, 0.8);
-		padding: 8rem 0;
 	}
 	&_discr{
 		color:@light_color;
@@ -453,7 +455,6 @@ p{
 			  left:20%;
 			  transform: translate(-50%, 0);
 				content:'';
-				display: inline-block;
 				height: 4.5rem;
 				width: 4.5rem;
 			}
@@ -496,6 +497,7 @@ p{
 	padding: 10rem 0;
 	&_working{
 		border:1px solid @black_color;
+		min-height: 28rem;
 	}
 	&_card{
 		display: block;
@@ -534,6 +536,7 @@ p{
 		margin-top: 3rem;
 		margin-bottom: 2rem;
 		text-decoration: none;
+		min-height: 6rem;
 	}
 	&_profession{
 		font-size: 1.6rem;
@@ -544,6 +547,9 @@ p{
 	padding-bottom: 10rem;
 	&_icons{
 		margin-top: 10rem!important;
+	}
+	&_box{
+		margin-bottom: 2rem;
 	}
 }
 
@@ -673,7 +679,13 @@ p{
 		}
 	}
 }
-
+.twitter{
+	background-image: url(../img/twitter_bg.jpg);
+	color:@light_color;
+	&_icon{
+		color:@red_color;
+	}
+}
 @media(max-width: 768px){
 	.accordion{
 		margin-bottom: 4rem;
@@ -683,6 +695,24 @@ p{
 	}
 	.feature_input{
 		margin-top: 20rem;
+	}
+	.clients_box{
+	    padding: 8rem 1rem 1rem 1rem;	
+	}
+	.clients_box_name{
+		color:@black_color;
+		font-size: 1.5rem!important;
+		font-weight: bold;
+		text-align: center;
+		&:before{
+		  position: absolute;
+		  top: 30%;
+		  left:50%;
+		  transform: translate(-50%, 0);
+			content:'';
+			height: 4.5rem;
+			width: 4.5rem;
+		}
 	}	
 }
 
@@ -701,13 +731,19 @@ p{
 			font-size: 1rem;
 		}
 	}
+	.clients_box_name{
+		font-size: 1.8rem;
+	}
 }
 @media (max-width: 576px){
-	.slider_btn{
-		margin-bottom:3rem;
-	}
+	// .slider_btn{
+	// 	margin-bottom:3rem;
+	// }
 	.about {
 		margin-bottom: 0;
+		&_icon{
+			background: none;
+		}
 	}
 	.thumbs_discr{
 		display: none;
@@ -729,14 +765,12 @@ p{
 		display: none;
 	}
 	.team_name{
-		font-size: 1rem;
-		margin-top: 2rem;
+		margin-top: 1rem;
 		margin-bottom: 1rem;
 		text-decoration: none;
 	}
 	.team_profession{
-		font-size: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 	.team-swiper-container{
 		padding-bottom: 5rem;
