@@ -3,6 +3,7 @@
 @light_color:#f5f5f5;
 @red_color:#ff0036;
 @black_color:#262626;
+
 .white{
 	color:@light_color;
 }
@@ -145,10 +146,16 @@ p{
 		}
 	}
 	&_icon{
-		width: 35px;
-		height: auto;
+		display: block;
+		width: 8.8rem;
+		height: 7.6rem;
+		background-image: url(../img/about_romb_white.png);
+		font-size: 3.5rem;
+		line-height: 7.6rem;
+		// width: 35px;
+		// height: auto;
 		margin-bottom: 2rem;
-		z-index: 9999;
+		// z-index: 9999;
 		cursor: pointer;
 	}
 }
@@ -158,33 +165,37 @@ p{
 	background-color: @black_color;
 	left: 50%!important;
     transform: translateX(-50%)!important;
+    bottom: 1rem!important;
 }
 
 .swiper-scrollbar-portfolio{
 	background-color: @red_color!important;
-	bottom: 0 !important;
+	bottom: 9px !important;
 }
 .about_scroll_drag{
 	position: absolute;
 	height: 2rem!important;
-	background-color: @black_color;
-	bottom: 2px;
+	// background-color: @black_color;
+	background-image: url(../img/romb_scroll_black.png);
+	bottom: -8px;
 }
 .portfolio_scroll_drag{
 	position: absolute;
-	bottom: 2px;
+	bottom: -8px;
 	height: 2rem !important;
-	background-color: @red_color;
+	// background-color: @red_color;
+	background-image: url(../img/romb_scroll_red.png);
 }
 .clients-swiper-scrollbar{
 	background-color: @red_color!important;
-	bottom: 0 !important;
+	bottom: 9px !important;
 }
 .clients_scroll_drag{
 	position: absolute;
 	height: 2rem!important;
-	background-color: @red_color;
-	bottom: 2px;
+	// background-color: @red_color;
+	background-image: url(../img/romb_scroll_red.png);
+	bottom: -8px;
 }
 .team-swiper-container{
 	padding-bottom: 10rem;
@@ -192,8 +203,9 @@ p{
 .team_scroll_drag{
 	position: absolute;
 	height: 2rem!important;
-	background-color: @black_color;
-	bottom: 2px;
+	// background-color: @black_color;
+	background-image: url(../img/romb_scroll_black.png);
+	bottom: -9px;
 }
 .collapsed{
 	color:@black_color;
@@ -215,6 +227,7 @@ p{
 	font-size: 2rem;
 	font-weight: 700;
 	margin-bottom: 3.5rem;
+	margin-top: 3rem;
 }
 .thumbs_discr{
 	font-size: 1.6rem;
@@ -244,15 +257,17 @@ p{
 }
 .gallery-thumbs .swiper-slide {
     height: 100%;
-    opacity: 0.4;
     margin-right: 2rem;
     margin-bottom: 3rem;	
     padding-top:2rem;
 }
 .gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
-}
 
+}
+.gallery-thumbs .swiper-slide-thumb-active > .about_icon{
+	background-image: url(../img/about_romb_red.png);
+	color:@light_color;
+}
 // Portfolio
 
 .portfolio{
@@ -525,6 +540,100 @@ p{
 		margin-bottom: 4rem;
 	}
 }
+.skills{
+	padding-bottom: 10rem;
+	&_icons{
+		margin-top: 10rem!important;
+	}
+}
+
+.services{
+	background-color: @black_color;
+	color:@light_color;
+	padding: 10rem 0;
+	&_header{
+		line-height: 5.6rem;
+	}
+	&_icon{
+		display: inline-block;
+		font-size: 3rem;
+		width: 6.6rem;
+		height: 5.6rem;
+		background-image: url(../img/romb_gray.jpg.png);
+		text-align: center;
+		margin-right: 2rem;
+		color:@black_color;
+	}
+	&_title{
+		display: inline-block;
+	}
+	&_discr{
+		margin-top: 3rem;
+		padding: 3rem;
+		font-family: Lato, sans-serif;
+		font-size: 1.6rem;
+		background-color: #343434;
+	}
+	&_card{
+		margin-top: 5rem;
+		&:hover{
+			.services_icon{
+				background-image: url(../img/romb_red.jpg.png);
+				color:@light_color;
+			}
+			.services_discr{
+				background-color: #3d2329;
+			}
+		}
+	}
+}	
+.plans{
+	padding: 10rem 0;
+	&_card{
+		padding-bottom: 1.5rem;
+		border:1px solid #e7e7e7;
+		margin-bottom: 2rem;
+		&:hover{
+			.plans_card_price{
+				background-color: @red_color;
+				color:@light_color;
+			}
+			.plans_card_btn{
+				background-color: @red_color;
+				color:@light_color;
+			}
+		}
+		&_title{
+			background-color: @black_color;
+			color:@light_color;
+			text-transform: uppercase;
+			font-size: 2rem;
+			padding: 1rem 8rem;
+		}
+		&_price{
+			background-color: @light_color;
+			padding: 2rem 0;
+			
+			span{
+				margin-right: 0.5rem;
+				font-size: 5rem;
+				font-weight: bold;
+				font-style: italic;
+				transition: all 0.4s ease;
+			}
+		}
+		&_discr{
+			border-bottom: 1px solid #e7e7e7;
+			padding: 1rem 0;
+		}
+		&_btn{
+			transition: all 0.4s ease;
+			&:hover{
+				transform: scale(1.2);
+			}
+		}
+	}
+}
 
 // Media
 @media (max-width: 992px){
@@ -594,6 +703,9 @@ p{
 	}
 }
 @media (max-width: 576px){
+	.slider_btn{
+		margin-bottom:3rem;
+	}
 	.about {
 		margin-bottom: 0;
 	}
@@ -615,5 +727,18 @@ p{
 	}
 	.feature_box_img{
 		display: none;
+	}
+	.team_name{
+		font-size: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		text-decoration: none;
+	}
+	.team_profession{
+		font-size: 1rem;
+		margin-bottom: 2rem;
+	}
+	.team-swiper-container{
+		padding-bottom: 5rem;
 	}
 }
