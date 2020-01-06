@@ -1,0 +1,130 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 1;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 10px;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.h1,
+.h2,
+.h3,
+.h4 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+.padding_2 {
+  padding-right: 1px;
+  padding-left: 1px;
+}
+.bg_light {
+  background-color: #fff;
+}
+.logo {
+  position: relative;
+}
+.logo img {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo .h1 {
+  color: #ffffff;
+  font-size: 38px;
+}
+.logo .h2 {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+}
+.logo .h2:last-child {
+  display: inline-block;
+  margin-left: 5px;
+}
+.logo a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+}
+.logotips {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.logotips .logo_kpl {
+  width: 90px;
+  height: auto;
+}
+.navbar-light {
+  margin-top: 27px;
+  background-color: #0f3875;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.news_header {
+  color: #0f3875;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ededed;
+  padding-left: 24px;
+}
+.news_box {
+  position: relative;
+}
+.news_box img {
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  top: 10px;
+  left: 10px;
+  margin: 10px;
+}
+.news_box .h3 {
+  color: #0f3875;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.news_box p {
+  display: inline-block;
+  height: 40px;
+  width: 60%;
+  overflow: hidden;
+  font-size: 14px;
+}
+.news_box span {
+  color: #999;
+  font-size: 12px;
+}
+.news_box a {
+  font-size: 12px;
+}
