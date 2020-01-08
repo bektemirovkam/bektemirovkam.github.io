@@ -17,6 +17,7 @@ body{
 *{
 	box-sizing: border-box;
 }
+
 .h1, .h2, .h3, .h4{
 	padding: 0;
 	margin: 0;
@@ -92,37 +93,77 @@ a{
 		background-color:#ededed;
 		padding-left: 24px;
 	}
-	&_box{
-		position: relative;
-		img{
-			display: inline-block;
-			width: 250px;
-			height: auto;
-			top:10px;
-			left:10px;
-			margin: 10px;
-		}
-		.h3{
-			color:@blue_color;
-			display: inline-block;
-			font-size: 14px;
-			font-weight: 700;
-			margin-top: 10px;
-			margin-bottom: 15px;
-		}
-		p{
-			display: inline-block;
-			height: 40px;
-			width: 60%;
-			overflow: hidden;
-			font-size: 14px;
-		}
-		span{
-			color:#999;
-			font-size: 12px;
-		}
-		a{
-			font-size: 12px;
+}
+.card{
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	&-body{
+		padding: 10px;
+	}
+	&-title{
+		color:@blue_color;
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	&-img{
+		border-radius: 0;
+		padding: 8px;
+	}
+	&-text{
+		max-height: 75px;
+		min-height: 75px;
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+	small{
+
+	}
+}
+
+.data{
+	display: block;
+	text-align: center;
+	color:#0356fc;
+	font-size: 14px;
+	&_tur{
+		display: block;
+		text-align: center;
+		color:#0356fc;
+		font-style: italic;
+		font-size: 14px;
+	}
+}
+.teams{
+	margin-top: 30px;
+	position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 270px;
+	&_img{
+		width: 140px;
+		height: auto;
+	}
+	span{
+		font-size: 35px;
+		font-weight: bold;
+		color:@blue_color;
+		position: absolute;
+	    left: 50%;
+	    transform: translate(-50%, -100%);
+	}
+	&_title{
+		font-size: 17px;
+		margin-top: 20px;
+		max-width: 140px;
+	}
+	figure{
+		position: absolute;
+		bottom: 10%;
+		&:last-child{
+			right:0;
 		}
 	}
 }
