@@ -10,10 +10,12 @@ body{
 	position: relative;
 	overflow-x: hidden;
 	opacity: 1;
-	background-image: url(../img/bg.jpg);
-	background-size: cover;
-	background-position: center;
-	padding-top: 10px;
+	background: url(../img/logo.png);
+	background-size: contain;
+	.main_bg{
+		background-color: rgba(0%, 15%, 75%, 0.6);
+		padding-top: 10px;
+	}
 }
 *{
 	box-sizing: border-box;
@@ -198,10 +200,15 @@ a{
 	}
 }
 .footer{
-	padding: 15px 0;
 	margin-top: 10px;
-	background: url(../img/footer_bg.jpg) no-repeat center;
+	background: url(../img/footer_bg2.jpg) no-repeat 10% 15%;
+	background-size: cover;
 	color:@light_color;
+	&_main_bg{
+		background: url(../img/footer_bg.jpg) no-repeat center;
+		opacity: 0.8;
+		padding: 100px 0;
+	}
 	&_title{
 		font-size: 16px;
 		font-weight: bold;
@@ -215,7 +222,7 @@ a{
 		&_item{
 			text-transform: uppercase;
 			font-size: 14px;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 			a{
 				color:@light_color;
 			}
@@ -223,5 +230,80 @@ a{
 	}
 }
 .partners{
-	padding: 10px;
+	padding: 25px 5px;
 }
+
+// Media
+
+@media (max-width: 1200px){
+	.logo{
+		text-align: center!important;
+	}
+	.navbar-light .navbar-nav .nav-link{
+		font-size: 13px;
+	}
+	.teams{
+		margin-top: 15px;
+		&_img{
+			width: 100px;
+		}
+		span{
+			font-size: 28px;
+		}
+	}
+	.table td, .table th{
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 992px){
+	.video_box{
+		.play{
+			width: 15%;
+			&:hover{
+				width: 17%;
+			}
+		}
+	}
+	.table td, .table th{
+		font-size: 13px;
+	}
+}
+
+@media(max-width: 768px){
+	.logo{
+		padding: 9px;
+		img{
+			width: 110px;
+		}
+		.h2{
+			font-size: 10px;
+		}
+		.h1{
+			font-size: 23px;
+		}
+		a{
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 576px){
+	.footer{
+		background: url(../img/footer_bg2.jpg) no-repeat 30% 15%;
+		background-size: cover;
+		&_main_bg{
+			padding: 50px 0;
+		}
+		&_text{
+			font-size: 10px;
+		}
+		&_list{
+			padding-left: 10px;
+			&_item{
+			font-size: 10px;
+			}
+		}
+	}
+}
+
