@@ -32,6 +32,9 @@ a {
 .bg_light {
   background-color: #fff;
 }
+.border_right {
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+}
 .logo {
   position: relative;
 }
@@ -124,6 +127,7 @@ a {
   text-align: center;
   color: #0356fc;
   font-size: 14px;
+  margin-top: 20px;
 }
 .data_tur {
   display: block;
@@ -170,4 +174,26 @@ a {
 }
 .teams figure:last-child {
   right: 0;
+}
+.video_box {
+  position: relative;
+}
+.video_box .play {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.video_box .play:hover {
+  width: 25%;
+}
+.video a {
+  max-height: 60px;
+  min-height: 60px;
+  overflow: hidden;
 }
