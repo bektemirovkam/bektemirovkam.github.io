@@ -175,6 +175,9 @@ a {
 .teams figure:last-child {
   right: 0;
 }
+.video {
+  margin: 0px 5px;
+}
 .video_box {
   position: relative;
 }
@@ -196,4 +199,32 @@ a {
   max-height: 60px;
   min-height: 60px;
   overflow: hidden;
+}
+.footer {
+  padding: 15px 0;
+  margin-top: 10px;
+  background: url(../img/footer_bg.jpg) no-repeat center;
+  color: #ffffff;
+}
+.footer_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer_text {
+  font-size: 14px;
+}
+.footer_list {
+  margin-top: 10px;
+  list-style: none;
+}
+.footer_list_item {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer_list_item a {
+  color: #ffffff;
+}
+.partners {
+  padding: 10px;
 }
