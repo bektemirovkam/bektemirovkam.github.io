@@ -10,11 +10,9 @@ body{
 	position: relative;
 	overflow-x: hidden;
 	opacity: 1;
-	background: url(../img/logo.png);
-	background-size: contain;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
 	.main_bg{
-		background-color: rgba(0%, 15%, 75%, 0.6);
-		padding-top: 10px;
 	}
 }
 *{
@@ -177,7 +175,7 @@ a{
 	}
 }
 .video{
-	margin: 0px 5px;
+	margin: 10px 5px;
 	&_box{
 		position: relative;
 		.play{
@@ -289,6 +287,15 @@ a{
 }
 
 @media (max-width: 576px){
+	.logotips{
+		justify-content: center;
+	}
+	.logo{
+		text-align: right!important;
+	}
+	body{
+		background: none;
+	}
 	.footer{
 		background: url(../img/footer_bg2.jpg) no-repeat 30% 15%;
 		background-size: cover;
