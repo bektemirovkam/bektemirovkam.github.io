@@ -86,6 +86,10 @@ a {
   color: #ffffff;
   text-transform: uppercase;
 }
+.news_box {
+  position: relative;
+  z-index: 1;
+}
 .news_header {
   color: #0f3875;
   display: block;
@@ -199,7 +203,10 @@ a {
   overflow: hidden;
 }
 .footer {
-  margin-top: 10px;
+  position: absolute;
+  top: 97.5%;
+  width: 100%;
+  z-index: 0;
   background: url(../img/footer_bg2.jpg) no-repeat 10% 15%;
   background-size: cover;
   color: #ffffff;
@@ -207,7 +214,7 @@ a {
 .footer_main_bg {
   background: url(../img/footer_bg.jpg) no-repeat center;
   opacity: 0.8;
-  padding: 100px 0;
+  padding: 140px 0;
 }
 .footer_title {
   font-size: 16px;

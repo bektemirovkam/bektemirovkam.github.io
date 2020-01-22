@@ -12,8 +12,6 @@ body{
 	opacity: 1;
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
-	.main_bg{
-	}
 }
 *{
 	box-sizing: border-box;
@@ -87,6 +85,10 @@ a{
 	}
 }
 .news{
+	&_box{
+		position: relative;
+		z-index: 1;
+	}
 	&_header{
 		color:@blue_color;
 		display: block;
@@ -198,14 +200,17 @@ a{
 	}
 }
 .footer{
-	margin-top: 10px;
+	position: absolute;
+	top:97.5%;
+	width: 100%;
+	z-index: 0;
 	background: url(../img/footer_bg2.jpg) no-repeat 10% 15%;
 	background-size: cover;
 	color:@light_color;
 	&_main_bg{
 		background: url(../img/footer_bg.jpg) no-repeat center;
 		opacity: 0.8;
-		padding: 100px 0;
+		padding: 140px 0;
 	}
 	&_title{
 		font-size: 16px;
