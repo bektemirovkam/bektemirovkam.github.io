@@ -3,10 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h2>Расставьте супергероев по полю.</h2>
+	<header class="header">
+		<div class="container">
+			<div class="header__body">
+				<a href="#" class="header__logo">
+					<img src="img/logo.jpg" alt="">
+				</a>
+				<div class="header__burger">
+					<span></span>
+				</div>
+				<div class="header__menu">
+					<ul class="header__list">
+						<li><a href="" class="header__link">Адаптивное</a></li>
+						<li><a href="" class="header__link">Бургер</a></li>
+						<li><a href="" class="header__link">Меню</a></li>
+						<li><a href="" class="header__link">Главная</a></li>
+						<li><a href="" class="header__link">Форум</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section style="padding-top: 140px">
+		<h2>Расставьте супергероев по полю.</h2>
 
 	<p>Супергерои и мяч - это элементы с классом "draggable". Сделайте так, чтобы их можно было переносить.</p>
 
@@ -32,7 +55,153 @@
 	<img src="https://en.js.cx/clipart/ball.svg" class="draggable">
 
 	<div style="clear:both"></div>
-</body>
-<script src="js/common.js"></script>
+	</section>
+
+	<section>
+		<p style = "text-align: center">Кликните на ячейку таблицы, чтобы отредактировать её. Нажмите ОК или ОТМЕНА, когда закончите.</p>
+	
+	<table id="bagua-table">
+		<tr>
+			<th colspan="3">Квадрат <em>Bagua</em>: Направление, Элемент, Цвет, Значение</th>
+		</tr>
+		<tr>
+			<td class="nw"><strong>Северо-Запад</strong>
+				<br>Металл
+				<br>Серебро
+				<br>Старейшины
+			</td>
+			<td class="n"><strong>Север</strong>
+				<br>Вода
+				<br>Синий
+				<br>Перемены
+			</td>
+			<td class="ne"><strong>Северо-Восток</strong>
+				<br>Земля
+				<br>Жёлтый
+				<br>Направление
+			</td>
+		</tr>
+		<tr>
+			<td class="w"><strong>Запад</strong>
+				<br>Металл
+				<br>Золото
+				<br>Молодость
+			</td>
+			<td class="c"><strong>Центр</strong>
+				<br>Всё
+				<br>Пурпурный
+				<br>Гармония
+			</td>
+			<td class="e"><strong>Восток</strong>
+				<br>Дерево
+				<br>Синий
+				<br>Будущее
+			</td>
+		</tr>
+		<tr>
+			<td class="sw"><strong>Юго-Запад</strong>
+				<br>Земля
+				<br>Коричневый
+				<br>Спокойствие
+			</td>
+			<td class="s"><strong>Юг</strong>
+				<br>Огонь
+				<br>Оранжевый
+				<br>Слава
+			</td>
+			<td class="se"><strong>Юго-Восток</strong>
+				<br>Дерево
+				<br>Зеленый
+				<br>Роман
+			</td>
+		</tr>
+
+	</table>
+	</section>
+	<section>
+		<div id="prompt-form-container">
+		<form id="prompt-form">
+			<div id="prompt-message">Введите что-нибудь...
+				<br>Пожалуйста..</div>
+				<input name="text" type="text">
+				<input type="submit" value="Ok">
+				<input type="button" name="cancel" value="Отмена">
+			</form>
+		</div>
+		<h1>Кликните на кнопку ниже</h1>
+		<input type="button" value="Кликните чтобы увидеть форму" id="show-form">
+	</section>
+<section>
+	<p>Кликните по "изображению" мыши и перемещайте её с помощью клавиш со стрелками.</p>
+
+  <pre id="mouse">
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+</pre> 
+</section>
+<section>
+	<h1 style='text-align: center;'>Депозитный калькулятор.</h1>
+
+  <form name="calculator">
+    <table>
+      <tr>
+        <td>Первоначальный депозит</td>
+        <td>
+          <input name="money" type="number" value="10000" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Срок вклада?</td>
+        <td>
+          <select name="months">
+            <option value="3">3 (минимум)</option>
+            <option value="6">6 (полгода)</option>
+            <option value="12" selected>12 (год)</option>
+            <option value="18">18 (1.5 года)</option>
+            <option value="24">24 (2 года)</option>
+            <option value="30">30 (2.5 года)</option>
+            <option value="36">36 (3 года)</option>
+            <option value="60">60 (5 лет)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Годовая процентная ставка?</td>
+        <td>
+          <input name="interest" type="number" value="5" required>
+        </td>
+      </tr>
+    </table>
+
+
+  </form>
+
+
+  <table id="diagram">
+    <tr>
+      <th>Было:</th>
+      <th>Станет:</th>
+    </tr>
+    <tr>
+      <th id="money-before"></th>
+      <th id="money-after"></th>
+    </tr>
+    <td>
+      <div style="background: red;width:40px;height:100px"></div>
+    </td>
+    <td>
+      <div style="background: green;width:40px;height:0" id="height-after"></div>
+    </td>
+  </table>
+</section>	
+	</body>
+	<script src="js/common.js"></script>
 </body>
 </html>
