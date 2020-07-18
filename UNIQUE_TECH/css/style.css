@@ -6367,7 +6367,6 @@ body.lock {
 .header .top-header__link {
   font-weight: 700;
   font-size: 14px;
-  color: #000;
   text-transform: uppercase;
   color: #464646;
 }
@@ -6966,12 +6965,12 @@ body.lock {
   .header .top-header__menu {
     position: fixed;
     opacity: 0;
-    top: 70px;
-    width: 70%;
+    top: 120px;
+    width: 50%;
     right: -100%;
     height: 100%;
     background-color: #ffc038;
-    padding: 80px 15px 20px 15px;
+    padding: 40px 15px 20px 15px;
     z-index: 2;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -6988,7 +6987,7 @@ body.lock {
     display: block;
     text-align: right;
     overflow: auto;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 
   .header .top-header__list li {
