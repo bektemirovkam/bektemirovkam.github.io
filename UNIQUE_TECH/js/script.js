@@ -25,17 +25,20 @@ var mySwiper = new Swiper('.swiper-container', {
 		el: '.swiper-pagination',
 	},
 });
-
 let burger = document.documentElement.querySelector(".top-header__burger");
 let menu = document.documentElement.querySelector(".top-header__menu");
 burger.onclick = ()=>{
 	menu.classList.toggle("active");
 	burger.classList.toggle("active");
+	document.body.classList.toggle("lock");
 }
 
 document.addEventListener("click", (event)=>{
 	if (!event.target.closest(".header__top")){
 		let activeMenu = document.documentElement.querySelector(".top-header__menu");
+		let activeBurger = document.documentElement.querySelector(".top-header__burger");
+		activeBurger.classList.remove("active");
 		activeMenu.classList.remove("active");
+		document.body.classList.remove("lock");
 	}
 })
