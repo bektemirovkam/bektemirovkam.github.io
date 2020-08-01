@@ -554,6 +554,14 @@ testWebP(function (support) {
 
 window.onload = ()=>{
 
+	new WOW().init();
+	if (document.documentElement.clientWidth <= 768){
+		let animationElements = document.querySelectorAll('div[data-wow-offset="50"]');
+		for (elem of animationElements){
+			elem.setAttribute('data-wow-offset', '0');
+		};
+	};
+
 	let date = new Date(),
 		day = date.getDate(),
 		month = date.getMonth() + 1;
@@ -908,18 +916,6 @@ window.onload = ()=>{
 		burger.classList.toggle("active");
 		menu.classList.toggle("active");
 		document.body.classList.toggle("lock");
-	}
-
-	new WOW().init();
-
-	window.onresize = ()=>{
-		if (window.innerWidth <= 767) {
-		    let animationElements = document.querySelectorAll('div[data-wow-offset="300"]');
-		    for (elem of animationElements){
-		    	elem.setAttribute('data-wow-offset', '0');
-		    }
-		}
-		return
 	}
 };
 
