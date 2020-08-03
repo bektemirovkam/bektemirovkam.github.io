@@ -670,6 +670,8 @@ window.onload = ()=>{
 		speed: 700,
 		effect: "fade",
 		simulateTouch: false,
+		preloadImages: false,
+    	lazy: true,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -691,6 +693,8 @@ window.onload = ()=>{
 		speed: 700,
 		effect: "fade",
 		simulateTouch: false,
+		preloadImages: false,
+    	lazy: true,
 		fadeEffect: {
 			crossFade: true
 		},
@@ -712,6 +716,8 @@ window.onload = ()=>{
 		speed: 700,
 		effect: "fade",
 		simulateTouch: false,
+		preloadImages: false,
+    	lazy: true,
 		fadeEffect: {
 			crossFade: true
 		},
