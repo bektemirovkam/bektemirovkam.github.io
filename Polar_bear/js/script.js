@@ -28,11 +28,3 @@ phone.onclick = ()=>{
 		};
 	});
 };
-
-let burger = document.querySelector(".menu__burger");
-burger.onclick = ()=>{
-	let menu = document.querySelector(".menu__list");
-	menu.classList.toggle("active");
-	burger.classList.toggle("active");
-	document.body.classList.toggle("lock");
-}
