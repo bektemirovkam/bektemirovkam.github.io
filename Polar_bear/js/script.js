@@ -28,3 +28,20 @@ phone.onclick = ()=>{
 		};
 	});
 };
+
+let scrollUp = document.querySelector(".scrollup");
+
+window.addEventListener('scroll', ()=>{
+	if (pageYOffset > 300) {
+		scrollUp.classList.add("active");
+	}
+	else {
+		scrollUp.classList.remove("active");
+	}
+});
+
+scrollUp.onclick = (event)=>{
+	event.preventDefault();
+	let topElem = document.querySelector(".slider");
+	topElem.scrollIntoView({block: "center", behavior: "smooth"});
+};
