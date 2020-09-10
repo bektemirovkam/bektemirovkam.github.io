@@ -338,8 +338,8 @@ let brandsSlider = new Swiper('.brands__slider', {
   }
 });
 
-// VK.Widgets.Group("vk_groups", {mode: 3, width: 250,}, 20003922);
-// VK.Widgets.Group("vk_groups2", {mode: 3, width: 250,}, 20003922);
+VK.Widgets.Group("vk_groups", {mode: 3, width: 250,}, 20003922);
+VK.Widgets.Group("vk_groups2", {mode: 3, width: 250,}, 20003922);
 
 let priceSlider = document.querySelector(".price-filter__slider");
 let inputFrom = document.querySelector(".input-from");
@@ -489,7 +489,6 @@ class TabItem {
         this.content.classList.toggle(ActiveTabContentClass, value);
     }
 }
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  let tabs = new TabsManager(document.querySelector('.tabs'));
-})
+if(document.querySelector('.tabs')){
+	let tabs = new TabsManager(document.querySelector('.tabs'));
+}
