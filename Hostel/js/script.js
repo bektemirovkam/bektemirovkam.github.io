@@ -1,15 +1,21 @@
-
+let roomFormSelector = '.form-room';
 let roomInputSelector = ".form-room__field";
 let roomBtnSelector = ".form-room__btn";
 let roomFromPickerSelector = ".form-room__field-from";
 let roomBeforePickerSelector = ".form-room__field-before";
 let roomErrorMessage = '.item-room__error';
+let okMessage = document.querySelector(".message-rooms");
+let okFrom = okMessage.querySelector(".message-rooms__from");
+let okBefore = okMessage.querySelector(".message-rooms__before");
+let okBtn = okMessage.querySelector(".message-rooms__ok");
+
 class RoomManager {
 	constructor(roomNode, id){
 		this.id = id;
 		this.initFromHtml(roomNode, id);
 	}
 	initFromHtml(roomNode, id){
+		let form = roomNode.querySelector(roomFormSelector);
 		let inputs = roomNode.querySelectorAll(roomInputSelector);
 		let submitBtn = roomNode.querySelector(roomBtnSelector);
 		let errorMessage = roomNode.querySelector(roomErrorMessage);
@@ -65,10 +71,13 @@ class RoomManager {
 		});
 		this.id = id;
 		this.inputs = inputs;
+		this.form = form;
 		this.submitBtn = submitBtn;
 		this.fromPicker = fromPicker;
 		this.beforePicker = beforePicker;
+		let calendar = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 		this.submitBtn.addEventListener("click",(event)=>{
+			event.preventDefault();
 			let selectedStart = this.beforePicker.getRange().start;
 			let selectedEnd = this.beforePicker.getRange().end;
 			if(selectedStart && selectedEnd){
@@ -77,7 +86,13 @@ class RoomManager {
 					start: selectedStart,
 					end: selectedEnd,
 				}));
-				window.location.href = window.location.href;
+				okMessage.classList.add("active");
+				okFrom.innerHTML = okFrom.dataset.text + selectedStart.getDate() + " " + calendar[selectedStart.getMonth()];
+				okBefore.innerHTML = okBefore.dataset.text + selectedEnd.getDate() + " " + calendar[selectedEnd.getMonth()];
+
+				okBtn.onclick = ()=>{
+					this.form.submit();
+				}
 				console.log(localStorage);
 			}
 			else {
