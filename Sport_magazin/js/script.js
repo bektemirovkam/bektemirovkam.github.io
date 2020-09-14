@@ -490,5 +490,9 @@ class TabItem {
     }
 }
 if(document.querySelector('.tabs')){
-	let tabs = new TabsManager(document.querySelector('.tabs'));
+	// let tabs = new TabsManager(document.querySelectorAll('.tabs'));
+	let tabs = document.querySelectorAll(".tabs");
+	for (var i = tabs.length - 1; i >= 0; i--) {
+		let tab = new TabsManager(tabs[i]);
+	}
 }
