@@ -1,0 +1,5 @@
+// если шрифты из одного семейства, но с разным весом, то имена оставляем одинаковые (в первых кавычках), а вес корректируем
+@include font("Fira Sans", "FiraSans-Light", "300", "normal");
+@include font("Fira Sans", "FiraSans-Regular", "400", "normal");
+@include font("Fira Sans", "FiraSans-Medium", "500", "normal");
+@include font("Fira Sans", "FiraSans-ExtraBold", "800", "normal");

@@ -1,0 +1,262 @@
+.order {
+	&__registration {}
+	&__list {}
+}
+.registration-order {
+	&__title {
+		margin-bottom: 15px;
+	}
+	&__body {
+		margin-bottom: 40px;
+		background-color: #fafafa;
+	}
+	&__nav {
+		@media (min-width: 768px) {
+			display: flex;
+		}
+	}
+	&__item {
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0px 25px;
+		cursor: pointer;
+		span{
+			font-size: 14px;
+			font-weight: 900;
+			color: #72c9d4;
+			text-transform: uppercase;
+			border-bottom: 1px dashed #72c9d4;
+		}
+		&.active{
+			span{
+				color: #fff;
+			}
+			background-color: #72c9d4;
+		}
+	}
+	&__content {
+		padding: 25px 40px;
+		@media (max-width: 459px) {
+			padding: 20px;
+		}
+	}
+	&__block {
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+}
+.list-order {
+	&__title {
+		margin-bottom: 15px;
+	}
+	&__items {}
+	&__item {}
+	&__footer {
+		text-align: right;
+		margin-bottom: 80px;
+		@media (max-width: 992px) {
+			margin-bottom: 10px;
+		}
+	}
+	&__summ {
+		font-size: 24px;
+		font-weight: 900;
+		color: #333333;
+		margin-bottom: 25px;
+		span{
+			font-size: 36px;
+			color: #f68038;
+		}
+	}
+	&__btn {
+		color: #fff;
+		background-color: #f68038;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 33px;
+		padding: 0 20px;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 900;
+		border-radius: 20px;
+	}
+}
+.item-order {
+	border: 1px solid #f5f5f5;
+	padding: 15px;
+	margin-bottom: 15px;
+	position: relative;
+	@media (min-width: 700px) {
+		display: flex;
+		align-items: center;
+	}
+	&__left {
+		@media (min-width: 410px) {
+			flex: 0 1 50%;
+			display: flex;
+			align-items: center;
+		}
+		@media (max-width: 699px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__image {
+		flex: 0 0 110px;
+		img{
+			max-width: 100%;
+		}
+	}
+	&__info {
+		padding-left: 30px;
+	}
+	&__name {}
+	&__price {
+		font-size: 24px;
+		font-weight: 900;
+		color: #333333;
+		@media (max-width: 410px) {
+			font-size: 18px;
+		}
+	}
+	&__right {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+	}
+	&__quantity {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		padding: 0px 20px;
+	}
+	&__total {
+		flex: 1 1 auto;
+	}
+	&__label {
+		font-weight: 300;
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+	&__summ {
+		font-size: 24px;
+		font-weight: 900;
+		color: #333333;
+		@media (max-width: 410px) {
+			font-size: 18px;
+		}
+	}
+	&__delete{
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		right: 15px;
+		top: 15px;
+		background: url('../img/delete.png');
+		&:hover{
+			background: url('../img/delete_h.png');
+		}
+	}
+}
+
+.block-registration {
+	&__body{
+		@media (min-width: 768px) {
+			display: flex;
+			margin: 0 -15px;
+		}
+	}
+	&__column {
+		@media (min-width: 768px) {
+			flex:0 1 50%;
+			padding: 0 15px;
+		}
+	}
+	&__line {
+		@media (min-width: 460px) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__label {
+		flex: 0 0 120px;
+		font-size: 14px;
+		font-weight: 900;
+		color: #333333;
+		span{
+			color: #f7a67e;
+		}
+		@media (max-width: 459px) {
+			padding-bottom: 10px;
+		}
+	}
+	&__label-area{
+		align-self: flex-start;
+	}
+	&__input {
+		flex: 1 1 auto;
+		padding-left: 30px;
+		@media (max-width: 459px) {
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+		input{
+			width: 100%;
+			height: 33px;
+			cursor: pointer;
+			padding: 0px 15px;
+		}
+		select{
+			height: 33px;
+			width: 100%;
+			cursor: pointer;
+		}
+		textarea{
+			resize: none;
+			padding: 8px;
+			width: 100%;
+		}
+	}
+	&__checkbox {
+		margin-left: 30px;
+		margin-top: 10px;
+		@media (max-width: 459px) {
+			margin: 0;
+		}
+		.checkbox-filter__text{
+			font-size: 12px;
+			font-weight: 300;
+		}
+	}
+	&__text {
+		@media (max-width: 767px) {
+			margin-top: 20px;
+		}
+		p{
+			margin-bottom: 30px;
+			font-size: 12px;
+			line-height: 18px;
+			&:first-child{
+				margin-bottom: 40px;
+			}
+			span{
+				color: #f7a67e;
+			}
+		}	
+	}
+}
+
+
+
+// .quantity {}
+// .quantity-button {}
+// .quantity-down {}
+// .quantity-up {}
