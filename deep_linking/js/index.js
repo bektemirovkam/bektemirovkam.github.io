@@ -1,5 +1,5 @@
 try {
-    window.location.replace("atm://")
+    window.location.replace("atmkz://")
 } catch (error) {
     window.alert(JSON.stringify(error))
 }
