@@ -42,7 +42,7 @@ window.onload = function () {
             window.location.replace(`intent:#Intent;scheme=atmkz://test/orders/?orderId=${orderId};package=com.electronic.electronic;end`)
             // window.location.replace(`intent:#Intent;package=com.profit.patientcab;end`)
         } else if (currentSystem === "iOS") {
-            window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+            window.location.replace(`atmkz://test/orders/?orderId=${orderId}`)
         }
     }
 
