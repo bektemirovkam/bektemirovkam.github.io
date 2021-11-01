@@ -1,6 +1,25 @@
 
 window.onload = function () {
 
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+        if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+        {
+          return 'iOS';
+      
+        }
+        else if( userAgent.match( /Android/i ) )
+        {
+      
+          return 'Android';
+        }
+        else
+        {
+          return 'unknown'; 
+        }
+      }
+
     function getOrderId() {
         const query = window.location.search.substring(1);
         const vars = query.split('&');
@@ -15,7 +34,14 @@ window.onload = function () {
     const orderId = getOrderId()
 
     if (orderId) {
-        window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+
+        const currentSystem = getMobileOperatingSystem()
+
+        if (currentSystem === "Android") {
+            window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.profit.patientcab;end`)
+        } else if (currentSystem === "iOS") {
+            window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+        }
     }
 
 }
