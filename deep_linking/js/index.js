@@ -38,6 +38,7 @@ window.onload = function () {
         const currentSystem = getMobileOperatingSystem()
 
         if (currentSystem === "Android") {
+          alert(`orderId === ${orderId}`)
             // window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.profit.patientcab;end`)
             window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.electronic.electronic;end`)
             // window.location.replace(`exp://127.0.0.1:19000/--/path/into/app?orderId=${orderId}`)
