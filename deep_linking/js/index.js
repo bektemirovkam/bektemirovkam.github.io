@@ -39,7 +39,7 @@ window.onload = function () {
 
         if (currentSystem === "Android") {
             // window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.profit.patientcab;end`)
-            window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.profit.patientcab;end`)
+            window.location.replace(`intent:#Intent;scheme=atmkz://orders/?orderId=${orderId};package=com.electronic.electronic;end`)
             // window.location.replace(`exp://127.0.0.1:19000/--/path/into/app?orderId=${orderId}`)
             // window.location.replace(`intent:#Intent;package=com.profit.patientcab;end`)
         } else if (currentSystem === "iOS") {
