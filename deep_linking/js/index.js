@@ -43,7 +43,9 @@ window.onload = function () {
             // window.location.replace(`exp://127.0.0.1:19000/--/path/into/app?orderId=${orderId}`)
             // window.location.replace(`intent:#Intent;package=com.profit.patientcab;end`)
         } else if (currentSystem === "iOS") {
-            window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+            // window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+            // window.location.replace(`atmkz://orders/?orderId=${orderId}`)
+            window.location.replace(`exp://127.0.0.1:19000//orders/?orderId=${orderId}`)
         }
     }
 
