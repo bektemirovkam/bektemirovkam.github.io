@@ -45,7 +45,7 @@ window.onload = function () {
         } else if (currentSystem === "iOS") {
             // window.location.replace(`atmkz://orders/?orderId=${orderId}`)
             // window.location.replace(`atmkz://orders/?orderId=${orderId}`)
-            window.location.replace(`exp://127.0.0.1:19000//orders/?orderId=${orderId}`)
+            window.location.replace(`atmkz://orders/?orderId=${orderId}`)
         }
     }
 
