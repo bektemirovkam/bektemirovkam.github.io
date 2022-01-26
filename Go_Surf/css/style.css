@@ -738,6 +738,10 @@ input[type=number] {
   padding: 100px 0px;
 }
 
+.surf__slider {
+  position: relative;
+}
+
 .surf .slider-surf {
   padding-top: 60px;
 }
@@ -1014,6 +1018,10 @@ input[type=number] {
   font-weight: 300;
   font-size: 10px;
   line-height: 14px;
+}
+
+.content-slider {
+  position: relative;
 }
 
 .content-slider__info {
