@@ -2946,6 +2946,9 @@ body.lock {
   margin: 10px 0 30px 0;
   padding: 25px 0;
 }
+.brands__container {
+  position: relative;
+}
 
 .slider-brands .swiper-wrapper {
   -webkit-box-align: center;
