@@ -1081,7 +1081,7 @@ body {
   width: 0.4rem;
   height: 0.7rem;
 }
-.first-td:hover .first-td__checbox label {
+.first-td:hover .first-td__checkbox label {
   opacity: 1;
 }
 
