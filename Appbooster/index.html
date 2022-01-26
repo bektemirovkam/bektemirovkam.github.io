@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>AppBooster</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      
+      <main class="main">
+        <div class="dashboard">
+          <div class="dashboard__header header">
+  <div class="header__left">
+    <div class="header__search-field">
+      <input type="text" placeholder="Поиск по запросу" />
+    </div>
+    <div class="header__devices devices">
+      <div class="devices__checkbox">
+        <input type="checkbox" id="iphone-ipod" value="iPhone/iPod" />
+        <label for="iphone-ipod">iPhone/iPod</label>
+      </div>
+      <div class="devices__checkbox">
+        <input type="checkbox" value="iPad" id="ipad" />
+        <label for="ipad" title="iPad" class="devices__checkbox"> iPad </label>
+      </div>
+    </div>
+  </div>
+  <div class="header__right">
+    <div class="header__btns">
+      <button class="header__btn btn">Скачать .CSV</button>
+      <button class="header__btn btn btn_pink">Добавить запрос</button>
+    </div>
+  </div>
+</div>
+ <div class="dashboard__notification notification">
+  <div class="notification__body">
+    <div class="notification__status status">
+      <div class="status__left">
+        <span>45% в</span>
+      </div>
+      <div class="status__right"><span>ТОП-3</span></div>
+    </div>
+    <div class="notification__message message">
+      <div class="message__icon">
+        <img
+          src="img/icons/icons.svg#exc_mark"
+          class="svg-exc_mark-dims"
+          alt="exc_mark"
+        />
+      </div>
+      <span class="message__text"> Вы недополучаете 450 инсталлов в день </span>
+    </div>
+  </div>
+</div>
+
+          <div class="dashboard__table table">
+  <table>
+    <thead>
+  <tr>
+    <th class="table__th first-td">
+      <div class="table__actions">
+        <div class="table__checkbox">
+          <input id="all" type="checkbox" value="all" class="checkbox_all" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M20 7L9.00004 18L3.99994 13"
+              stroke="red"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <label for="all"></label>
+        </div>
+        <div class="table__icon-btns">
+          <button class="table__icon-btn icon-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <g opacity="0.3">
+                <path
+                  d="M3 3H15V16C15 16.5523 14.5523 17 14 17H4C3.44772 17 3 16.5523 3 16V3Z"
+                  stroke="#11223E"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5 1C5 0.447715 5.44772 0 6 0H12C12.5523 0 13 0.447715 13 1V2H5V1Z"
+                  fill="#11223E"
+                />
+                <rect y="2" width="18" height="2" fill="#11223E" />
+                <rect x="6" y="6" width="2" height="8" fill="#11223E" />
+                <rect x="10" y="6" width="2" height="8" fill="#11223E" />
+              </g>
+            </svg>
+          </button>
+          <button class="table__icon-btn icon-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <g opacity="0.3">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C11.3574 0 14.2317 2.06817 15.4185 5H13.1973C12.1599 3.2066 10.2208 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C10.973 14 13.441 11.8377 13.917 9H15.9381C15.446 12.9463 12.0796 16 8 16Z"
+                  fill="#11223E"
+                />
+              </g>
+            </svg>
+          </button>
+          <button class="table__icon-btn icon-btn">
+            <svg
+              width="20"
+              height="18"
+              viewBox="0 0 20 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.3">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.6667 10.9988C18.8293 7.4654 19.7659 4.39404 20 0.0451991C15.8374 -0.199423 12.8195 0.452903 9.02114 4.39404C7.25203 4.1766 5.43089 4.7202 4 6.05203L6.36748 8.82442C5.22276 9.91163 5.1187 11.7871 6.15935 13.0102C6.75772 13.6897 7.56423 14.0158 8.39675 13.9887C9.02114 13.9615 9.67154 13.7169 10.1659 13.2276L12.5333 16C13.9642 14.6953 14.6667 12.8471 14.6667 10.9988ZM15.8374 3.95915C16.5138 4.77456 16.4618 5.99767 15.6813 6.73154C15.3431 7.03052 14.9268 7.1936 14.5106 7.22078C13.9382 7.24796 13.4179 7.00334 13.0276 6.56846C12.3512 5.75305 12.4033 4.52994 13.1837 3.79607C13.4959 3.49709 13.9122 3.33401 14.3545 3.30683C14.9268 3.27965 15.4472 3.52427 15.8374 3.95915Z"
+                  fill="#11223E"
+                />
+                <path
+                  d="M0 18L0.136521 17.5628C0.163825 17.4536 0.92834 14.8579 1.91129 13.847C2.45737 13.3005 3.11267 13 3.71336 13C4.09562 13 4.39597 13.1093 4.6417 13.3552C5.2697 13.9836 5.05126 15.1858 4.15023 16.0874C3.08537 17.153 0.546083 17.8361 0.436866 17.8907L0 18Z"
+                  fill="#11223E"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            class="table__icon-btn table__icon-btn_filter icon-btn icon-btn"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.3">
+                <path
+                  d="M4 4L9 12V18L15 21V12L20 4H4Z"
+                  stroke="#11223E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </th>
+    <th class="second-td">
+      <select class="second-td__select">
+        <option value="1">Оценка частотности</option>
+        <option value="2">Оценка частотности</option>
+        <option value="3">Оценка частотности</option>
+        <option value="4">Оценка частотности</option>
+        <option value="5">Оценка частотности</option>
+      </select>
+    </th>
+    <th>
+      <span class="table__date">25.06</span>
+      <span class="table__badge">30</span>
+    </th>
+    <th><span class="table__date">26.06</span></th>
+    <th><span class="table__date">27.06</span></th>
+    <th>
+      <span class="table__date">28.06</span>
+    </th>
+    <th><span class="table__date">29.06</span></th>
+    <th><span class="table__date">30.06</span></th>
+    <th><span class="table__date">01.07</span></th>
+    <th><span class="table__date">02.07</span></th>
+    <th><span class="table__date">03.07</span></th>
+    <th><span class="table__date">04.07</span></th>
+    <th><span class="table__date">05.07</span></th>
+    <th><span class="table__date">06.07</span></th>
+    <th><span class="table__date">07.07</span></th>
+    <th><span class="table__date">08.07</span></th>
+    <th><span class="table__date">09.07</span></th>
+    <th><span class="table__date">10.07</span></th>
+  </tr>
+</thead>
+
+    <tbody>
+      <!-- 1 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="1" type="checkbox" class="checkbox_row" value="1" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="1"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк отзывы</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_1" type="checkbox" value="star_1" />
+                <label for="star_1">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">4150</td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">62</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__count">48</span>
+        </td>
+        <td><span class="table__count">37</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">89</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">45</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">37</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">89</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">37</span></td>
+      </tr>
+      <!-- end 1 tr -->
+      <tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__sticky" rowspan="5" colspan="2">
+    <div class="dropdown-tr__top">
+      <a href="#">Просмотреть Топ-10</a>
+    </div>
+  </td>
+  <!-- <td class="dropdown-tr__sticky dropdown-tr__sticky_second" rowspan="5"></td> -->
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+
+      <!-- 2 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="2" type="checkbox" class="checkbox_row" value="2" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="2"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_2" type="checkbox" value="star_2" />
+                <label for="star_2">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">2750</td>
+        <td>
+          <span class="table__count">25</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">91</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">47</span></td>
+      </tr>
+      <!-- end 2 tr -->
+      <tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__sticky" rowspan="5" colspan="2">
+    <div class="dropdown-tr__top">
+      <a href="#">Просмотреть Топ-10</a>
+    </div>
+  </td>
+  <!-- <td class="dropdown-tr__sticky dropdown-tr__sticky_second" rowspan="5"></td> -->
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+<tr class="table__dropdown-tr dropdown-tr">
+  <td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="3">
+  <img src="img/icons/icons.svg#03" alt="3" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="1">
+  <img src="img/icons/icons.svg#01" alt="1" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+<td class="dropdown-tr__icon" tabindex="0" data-icon-index="2">
+  <img src="img/icons/icons.svg#02" alt="2" />
+</td>
+
+</tr>
+
+      <!-- 3 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="3" type="checkbox" class="checkbox_row" value="3" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="3"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк отзывы</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_3" type="checkbox" value="star_3" />
+                <label for="star_3">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">4150</td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">52</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__count">83</span>
+        </td>
+        <td><span class="table__count">75</span></td>
+        <td><span class="table__count">23</span></td>
+
+        <td>
+          <span class="table__count">19</span>
+        </td>
+        <td>
+          <span class="table__count">62</span>
+        </td>
+        <td><span class="table__count">54</span></td>
+        <td>
+          <span class="table__count">23</span>
+        </td>
+        <td><span class="table__count">84</span></td>
+        <td><span class="table__count">75</span></td>
+        <td><span class="table__count">26</span></td>
+        <td><span class="table__count">93</span></td>
+        <td><span class="table__count">12</span></td>
+        <td><span class="table__count">24</span></td>
+        <td><span class="table__count">84</span></td>
+        <td><span class="table__count">74</span></td>
+      </tr>
+      <!-- end 3 tr -->
+      <!-- 4 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="4" type="checkbox" value="4" class="checkbox_row" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="4"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_4" type="checkbox" value="star_4" />
+                <label for="star_4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">2750</td>
+        <td>
+          <span class="table__count">25</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">91</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td class="table__increase">
+          <span class="table__status table__status_increase">1</span>
+          <span class="table__count">47</span>
+        </td>
+      </tr>
+      <!-- end 4 tr -->
+      <!-- 5 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="5" type="checkbox" class="checkbox_row" value="5" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="5"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк отзывы</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_5" type="checkbox" value="star_5" />
+                <label for="star_5">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">4150</td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">25</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__count">91</span>
+        </td>
+        <td>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td class="table__increase">
+          <span class="table__status">new</span>
+          <span class="table__count">47</span>
+          <span class="table__badge">30</span>
+        </td>
+      </tr>
+      <!-- end 5 tr -->
+      <!-- 6 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="6" type="checkbox" class="checkbox_row" value="6" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="6"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_6" type="checkbox" value="star_6" />
+                <label for="star_6">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">4150</td>
+        <td>
+          <span class="table__count">25</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">91</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">47</span></td>
+      </tr>
+      <!-- end 6 tr -->
+      <!-- 7 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="7" type="checkbox" class="checkbox_row" value="7" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="7"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_7" type="checkbox" value="star_7" />
+                <label for="star_7">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">4150</td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">91</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__count">91</span>
+        </td>
+        <td>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td class="table__decrease">
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">47</span>
+          <span class="table__badge">30</span>
+        </td>
+      </tr>
+      <!-- end 7 tr -->
+      <!-- 8 tr -->
+      <tr>
+        <td class="table__th first-td">
+          <div class="first-td__wrapper">
+            <div class="table__checkbox">
+              <input id="8" type="checkbox" class="checkbox_row" value="8" />
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 7L9.00004 18L3.99994 13"
+                  stroke="red"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <label for="8"></label>
+            </div>
+            <span class="first-td__text">Тинькофф банк</span>
+            <div class="first-td__actions">
+              <div class="first-td__checbox checkbox-star">
+                <input id="star_8" type="checkbox" value="star_8" />
+                <label for="star_8">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8 13.6667L3.33333 16L4.30145 10.9795L1 7.44444L5.71417 6.6316L8 2L10.2858 6.6316L15 7.44444L11.6986 10.9795L12.6667 16L8 13.6667Z"
+                      stroke="#B8BDC6"
+                    />
+                  </svg>
+                </label>
+              </div>
+              <div class="first-td__arrow">
+                <button class="first-td__arrow-btn icon-btn">
+                  <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.292892 1.35355L0.999999 0.64644L5.35355 4.99999L0.999999 9.35355L0.292892 8.64644L3.93934 4.99999L0.292892 1.35355Z"
+                      fill="#11223E"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="second-td">2750</td>
+        <td>
+          <span class="table__count">25</span>
+        </td>
+        <td>
+          <span class="table__count">38</span>
+        </td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">32</span></td>
+
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">91</span>
+          <span class="table__badge">30</span>
+        </td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">26</span>
+        </td>
+        <td><span class="table__count">45</span></td>
+        <td>
+          <span class="table__status table__status_decrease">1</span>
+          <span class="table__count">32</span>
+        </td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">57</span></td>
+        <td><span class="table__count">62</span></td>
+        <td><span class="table__count">39</span></td>
+        <td><span class="table__count">21</span></td>
+        <td><span class="table__count">42</span></td>
+        <td><span class="table__count">48</span></td>
+        <td><span class="table__count">47</span></td>
+      </tr>
+      <!-- end 8 tr -->
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </main>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

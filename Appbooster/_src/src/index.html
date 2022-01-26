@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "AppBooster" })
+  <body>
+    <div class="wrapper">
+      <!-- @@include('html/header.html', {})
+      @@include('html/footer.html', {}) -->
+      <main class="main">
+        <div class="dashboard">
+          @@include('html/header.html') @@include('html/notification.html')
+          @@include('html/table.html')
+        </div>
+      </main>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
