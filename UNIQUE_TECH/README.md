@@ -1,3 +1,3 @@
 ## Один из первых сверстаных макетов
 
-[Результат](bektemirovkam.github.io/UNIQUE_TECH/)
+[Результат](https://bektemirovkam.github.io/UNIQUE_TECH/)
