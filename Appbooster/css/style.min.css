@@ -395,6 +395,10 @@ body {
   }
 }
 
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -472,7 +476,9 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
 }
 .checkbox-star label {
   cursor: pointer;
@@ -662,7 +668,9 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  opacity: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
 }
 .devices__checkbox label {
   height: 100%;
@@ -681,6 +689,9 @@ body {
 }
 .devices__checkbox input:focus + label {
   border: 1px solid rgba(17, 34, 62, 0.4);
+}
+.devices__checkbox input:disabled + label {
+  opacity: 0.5;
 }
 .devices__checkbox:nth-child(2n) label {
   border-radius: 0px 5px 5px 0px;

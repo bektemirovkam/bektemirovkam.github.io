@@ -33,6 +33,10 @@ body {
     font-size: 0.875rem;
   }
 }
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -113,7 +117,9 @@ body {
     position: absolute;
     width: 1px;
     height: 1px;
-    opacity: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
   }
   label {
     cursor: pointer;
@@ -290,7 +296,9 @@ body {
       position: absolute;
       width: 1px;
       height: 1px;
-      opacity: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: -1px;
     }
     label {
       height: 100%;
@@ -309,6 +317,9 @@ body {
     }
     input:focus + label {
       border: 1px solid rgba($dark_blue, 0.4);
+    }
+    input:disabled + label {
+      opacity: 0.5;
     }
     &:nth-child(2n) {
       label {
@@ -687,7 +698,7 @@ body {
     }
   }
   &:hover {
-    .first-td__checbox {
+    .first-td__checkbox {
       label {
         opacity: 1;
       }

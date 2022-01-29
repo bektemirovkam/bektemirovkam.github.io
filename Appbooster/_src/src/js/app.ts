@@ -1,3 +1,4 @@
+import "./focus-visible/focus-visible";
 import { testWebP } from "./modules";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -156,10 +157,8 @@ const handleShowTableFilter = () => {
 const handleResize = () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
     if (shownFilter) {
-      console.log("shown");
       setColspanStickyTDs(2);
     } else {
-      console.log("shown false");
       setColspanStickyTDs(1);
     }
   }
