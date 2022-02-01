@@ -1,15 +1,7 @@
-import "./focus-visible/focus-visible";
-import { testWebP } from "./modules";
+import "focus-visible/dist/focus-visible.min";
+import Choices from "choices.js";
 
-window.addEventListener("DOMContentLoaded", () => {
-  testWebP(function (support) {
-    if (support == true) {
-      document.documentElement.classList.add("webp");
-    } else {
-      document.documentElement.classList.add("no-webp");
-    }
-  });
-});
+import { testWebP } from "./modules";
 
 const tableToggler = () => {
   const toggleBtns = document.querySelectorAll(".first-td__arrow");
@@ -49,7 +41,7 @@ const tableToggler = () => {
   }
 };
 
-const mouseEventHandler = (
+const iconsEventHandler = (
   element: HTMLElement,
   eventName: "mouseenter" | "mouseleave" | "focus" | "blur",
   list: NodeListOf<Element>,
@@ -95,10 +87,10 @@ const handleChangeCheckboxValue = (value: boolean, selector: string) => {
 const handleIconHover = () => {
   const icons = document.querySelectorAll(".dropdown-tr__icon");
   for (let icon of icons) {
-    mouseEventHandler(icon as HTMLElement, "mouseenter", icons, "iconIndex");
-    mouseEventHandler(icon as HTMLElement, "mouseleave", icons, "iconIndex");
-    mouseEventHandler(icon as HTMLElement, "focus", icons, "iconIndex");
-    mouseEventHandler(icon as HTMLElement, "blur", icons, "iconIndex");
+    iconsEventHandler(icon as HTMLElement, "mouseenter", icons, "iconIndex");
+    iconsEventHandler(icon as HTMLElement, "mouseleave", icons, "iconIndex");
+    iconsEventHandler(icon as HTMLElement, "focus", icons, "iconIndex");
+    iconsEventHandler(icon as HTMLElement, "blur", icons, "iconIndex");
   }
 };
 
@@ -164,12 +156,31 @@ const handleResize = () => {
   }
 };
 
+const initSelect = () => {
+  const element = document.querySelector(".second-td__select");
+  if (element) {
+    const choices = new Choices(element, {
+      searchEnabled: false,
+      itemSelectText: "",
+      position: "bottom",
+    });
+  }
+};
+
 window.addEventListener("DOMContentLoaded", () => {
+  testWebP(function (support) {
+    if (support == true) {
+      document.documentElement.classList.add("webp");
+    } else {
+      document.documentElement.classList.add("no-webp");
+    }
+  });
   handleResize();
   tableToggler();
   handleIconHover();
   handleSelectAll();
   handleShowTableFilter();
+  initSelect();
 });
 
 window.addEventListener("resize", (e) => {

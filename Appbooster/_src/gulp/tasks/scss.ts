@@ -28,7 +28,8 @@ export const scss = () => {
     .pipe(
       sass({
         outputStyle: "expanded",
-        includePaths: require("scss-resets").includePaths,
+        // includePaths: require("scss-resets").includePaths,
+        includePaths: ["node_modules"],
       })
     )
     .pipe(app.plugins.ifPlugin(app.isBuild, groupCssMediaQueries()))
