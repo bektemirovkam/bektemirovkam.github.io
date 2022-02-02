@@ -9,3 +9,9 @@
 ## REACT
 
 [Тестовое задание от Aviasales](https://github.com/bektemirovkam/aviasales) </br>
+[Учебный проект (TODO)](https://github.com/bektemirovkam/todo) </br>
+[Учебный проект (React Pizza)](https://github.com/bektemirovkam/reactPizza) </br>
+
+## MERN
+
+[Тестовое задание](https://github.com/bektemirovkam/Terminals) </br>
