@@ -8,4 +8,4 @@
 
 ## REACT
 
-[Тестовое задание от Aviasales](https://github.com/bektemirovkam/bektemirovkam.github.io/tree/master/Aviasales) </br>
+[Тестовое задание от Aviasales](https://github.com/bektemirovkam/aviasales) </br>
