@@ -96,7 +96,6 @@ const handleIconHover = () => {
 
 const handleSelectAll = () => {
   const mainCheckbox = document.querySelector(".checkbox_all");
-
   if (mainCheckbox && mainCheckbox instanceof HTMLInputElement) {
     mainCheckbox.addEventListener("change", (e) => {
       if (mainCheckbox.checked) {

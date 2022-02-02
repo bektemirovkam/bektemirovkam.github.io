@@ -5,3 +5,7 @@
 [Верстка спорт магазина](https://github.com/bektemirovkam/bektemirovkam.github.io/tree/master/Sport_magazin)</br>
 [Один из первых сверстаных макетов](https://github.com/bektemirovkam/bektemirovkam.github.io/tree/master/multipurprose)</br>
 [Один из первых сверстаных макетов](https://github.com/bektemirovkam/bektemirovkam.github.io/tree/master/UNIQUE_TECH)</br>
+
+## REACT
+
+[Тестовое задание от Aviasales](https://github.com/bektemirovkam/bektemirovkam.github.io/tree/master/Aviasales) </br>
