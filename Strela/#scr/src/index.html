@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Strela" })
+  <body>
+    <div class="wrapper">
+      <!-- Для прокрутки к верху, т.к. header фиксированный -->
+      <div id="header"></div>
+      <main class="main">
+        @@include('html/header.html') @@include('html/banner.html')
+        @@include('html/seances.html') @@include('html/comments.html')
+        @@include('html/about.html') @@include('html/price.html')
+      </main>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
