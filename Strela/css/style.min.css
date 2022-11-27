@@ -865,3 +865,10 @@ body.lock {
 .price-list__cost {
   padding-left: 1rem;
 }
+
+.map {
+  margin-bottom: 5rem;
+}
+.map__container {
+  border-radius: 10px;
+}

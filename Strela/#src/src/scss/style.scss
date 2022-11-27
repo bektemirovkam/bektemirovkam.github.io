@@ -581,3 +581,12 @@ body.lock {
   }
 }
 //PRICE END
+
+//MAP
+.map {
+  margin-bottom: 5rem;
+  &__container {
+    border-radius: 10px;
+  }
+}
+//MAP END
